@@ -6,10 +6,12 @@ function ToDoItem(props) {
   return (
     <>
       <li className={styles.todo__item}>
-        <p className="todo__item-paragraph">
+        <p className={styles["todo__item-paragraph"]}>
           {id}. {text}
         </p>
-        <button className="todo__item-btn" onClick={() => deleteTask(id)}>X</button>
+        <button className="todo__item-btn" onClick={() => deleteTask(id)}>
+          X
+        </button>
       </li>
     </>
   );
