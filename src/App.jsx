@@ -18,6 +18,26 @@ function App() {
       id: 3,
       text: "wrttjetyj",
     },
+    {
+      id: 4,
+      text: "wrttjetyj",
+    },
+    {
+      id: 5,
+      text: "wrttjetyj",
+    },
+    {
+      id: 6,
+      text: "wrttjetyj",
+    },
+    {
+      id: 7,
+      text: "wrttjetyj",
+    },
+    {
+      id: 8,
+      text: "wrttjetyj",
+    },
   ]);
 
   function handleDeleteTask(id) {
@@ -36,25 +56,27 @@ function App() {
 
   return (
     <>
-      <div className={`${styles.todo} container`}>
-        <h1 className="todo__title todo__title--big">ToDoList</h1>
-        <ToDoForm
-          newTaskText={newTaskText}
-          addTask={handleAddTask}
-          setNewTaskText={setNewTaskText}
-        />
-        <div className="todo__form">
-          <h2 className="todo__title">Tasks</h2>
-          <ul className={styles.todo__list}>
-            {tasks.map(task => (
-              <ToDoItem
-                key={task.id}
-                id={task.id}
-                text={task.text}
-                deleteTask={handleDeleteTask}
-              ></ToDoItem>
-            ))}
-          </ul>
+      <div className="container">
+        <div className={styles.todo}>
+          <h1 className="todo__title todo__title--big">ToDoList</h1>
+          <ToDoForm
+            newTaskText={newTaskText}
+            addTask={handleAddTask}
+            setNewTaskText={setNewTaskText}
+          />
+          <div className="todo__form">
+            <h2 className="todo__title">Tasks</h2>
+            <ul className={styles.todo__list}>
+              {tasks.map(task => (
+                <ToDoItem
+                  key={task.id}
+                  id={task.id}
+                  text={task.text}
+                  deleteTask={handleDeleteTask}
+                ></ToDoItem>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>
