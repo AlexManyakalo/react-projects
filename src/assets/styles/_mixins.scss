@@ -1,0 +1,16 @@
+@use "./variables" as v;
+
+@mixin view-text {
+  font-family: v.$font-family;
+  color: v.$color-light;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@mixin font-text($src, $weight) {
+  font-family: "Acrom";
+  src: url("/fonts/Acrom-#{$src}.woff2") format("woff2");
+  font-weight: $weight;
+  font-style: normal;
+  font-display: swap;
+}

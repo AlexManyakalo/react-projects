@@ -31,14 +31,14 @@ body,
     list-style: none;
 }
 
-p {
-    --paragraphMarginBottom: 24px;
+$paragraphMarginBottom: 24px;
 
+p {
     margin-block: 0;
 }
 
 p:where(:not([class]):not(:last-child)) {
-    margin-bottom: var(--paragraphMarginBottom);
+    margin-bottom: $paragraphMarginBottom;
 }
 
 img {

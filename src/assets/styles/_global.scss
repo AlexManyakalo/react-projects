@@ -1,6 +1,21 @@
-@use "./variables" as *;
+@use "./globals" as *;
+
+@font-face {
+  @include font-text("Regular", 400);
+}
+
+@font-face {
+  @include font-text("Medium", 500);
+}
+
+@font-face {
+  @include font-text("Bold", 700);
+}
 
 body {
+  @include view-text;
+
+  background-color: $color-dark;
 }
 
 h1,
@@ -12,25 +27,56 @@ h4 {
   text-transform: uppercase;
 }
 
-p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.48;
-}
-
 a {
+  @include view-text;
+
   text-decoration: none;
-  font-weight: 600;
-  color: var(--color-dark);
 }
 
 button {
+  @include view-text;
+
+  display: grid;
+  align-content: center;
+  padding: 10px;
+  height: $btn-height;
+  cursor: pointer;
   border: none;
+  border-radius: $border-radius;
   background-color: transparent;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    background-color: $color-dark;
+  }
+}
+
+input {
+  padding: 5px 15px;
+  color: $color-light;
+  outline: none;
+  border: $border;
+  border-radius: $border-radius;
+  background-color: transparent;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    border-color: $color-purple;
+  }
+  &:focus-visible {
+    border-color: $color-purple;
+  }
 }
 
 .container {
   max-width: $container-width + $container-padding-x * 2;
   margin-inline: auto;
   padding-inline: $container-padding-x;
+}
+
+.todo__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
 }
