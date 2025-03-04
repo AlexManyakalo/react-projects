@@ -1,0 +1,24 @@
+@use "./globals" as *;
+
+@font-face {
+  @include font-text("Medium", 500);
+}
+
+@font-face {
+  @include font-text("Bold", 700);
+}
+
+body {
+}
+
+h1,
+h2,
+h3,
+h4 {
+}
+
+a {
+}
+
+button {
+}
