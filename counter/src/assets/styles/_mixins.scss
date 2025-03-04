@@ -1,9 +1,0 @@
-@use "./variables" as v;
-
-@mixin font-text($src, $weight) {
-  font-family: "Acrom";
-  src: url("/fonts/Acrom-#{$src}.woff2") format("woff2");
-  font-weight: $weight;
-  font-style: normal;
-  font-display: swap;
-}
