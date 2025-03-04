@@ -1,0 +1,22 @@
+@use "../../styles/globals" as g;
+
+.counter__main-btn {
+  @include g.style-text(24, 700);
+
+  cursor: pointer;
+  padding: 5px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: g.$border-radius;
+  background-color: g.$color-gray;
+  transition-duration: g.$transition-duration;
+
+  &:hover {
+    scale: 1.1;
+  }
+
+  &:active {
+    background-color: g.$color-dark-red;
+  }
+}

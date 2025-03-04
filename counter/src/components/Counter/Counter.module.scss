@@ -1,0 +1,9 @@
+@use "../../styles/globals" as g;
+
+.counter__main-count {
+  @include g.style-text(32, 700);
+
+  text-align: center;
+  width: 100px;
+  overflow: hidden;
+}
