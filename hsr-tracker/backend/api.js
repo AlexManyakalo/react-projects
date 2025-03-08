@@ -1,10 +1,15 @@
 import axios from "axios";
 
-const api = axios.create({
+const apiClient = axios.create({
   baseURL: "http://localhost:3000/",
-  headers: {
-    "Content-Type": "application/json",
-  },
 });
 
-export default api;
+const apiServer = axios.create({
+  baseURL: "https://api.mihomo.me/",
+});
+
+const apiImages = axios.create({
+  baseURL: "https://github.com/Mar-7th/StarRailRes/blob/master/",
+});
+
+export default { apiClient, apiServer, apiImages };
