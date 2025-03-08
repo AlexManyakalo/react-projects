@@ -22,6 +22,44 @@ h4 {
   text-transform: uppercase;
 }
 
+input {
+  padding: 10px;
+  color: g.$color-light;
+  border: g.$border;
+  border-radius: g.$border-radius;
+  outline: none;
+  background-color: transparent;
+  transition-duration: g.$transition-duration;
+
+  &:hover {
+    border-color: g.$color-red;
+  }
+
+  &:focus {
+    border-color: g.$color-red;
+  }
+}
+
+button {
+  @include g.style-text(18);
+
+  cursor: pointer;
+  padding: 6px 10px;
+  color: g.$color-light;
+  border: none;
+  border-radius: g.$border-radius;
+  background-color: g.$color-gray;
+  transition-duration: g.$transition-duration;
+
+  &:hover {
+    background-color: g.$color-dark-red;
+  }
+
+  &:active {
+    background-color: g.$color-red;
+  }
+}
+
 .container {
   max-width: g.$container-width + g.$container-padding-x * 2;
   margin-inline: auto;
