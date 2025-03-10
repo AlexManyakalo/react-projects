@@ -1,7 +1,20 @@
+import { useEffect } from "react";
 import styles from "./ErrorWindow.module.scss";
 
 function ErrorWindow(props) {
-  const { errorMessage, setErrorMessage } = props;
+  const { errorMessage, setErrorMessage, setIsLoading } = props;
+
+  useEffect(() => {
+    if (errorMessage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [errorMessage]);
 
   return (
     <>
@@ -11,7 +24,10 @@ function ErrorWindow(props) {
         <p className={styles.error__paragraph}>{errorMessage}</p>
         <button
           className={styles.error__btn}
-          onClick={() => setErrorMessage("")}
+          onClick={() => {
+            setErrorMessage("");
+            setIsLoading(false);
+          }}
         >
           Ок
         </button>
