@@ -5,6 +5,7 @@ function Form(props) {
 
   return (
     <section className={styles.data}>
+      <p className={styles.data__text}>Для примера введите: 700474067</p>
       <form
         onSubmit={e => {
           e.preventDefault();
