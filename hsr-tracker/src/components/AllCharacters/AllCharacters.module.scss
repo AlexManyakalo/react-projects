@@ -1,0 +1,63 @@
+@use "../../styles/globals" as g;
+
+.content__item {
+  cursor: pointer;
+  position: relative;
+  width: 180px;
+  height: 240px;
+  border-radius: g.$border-radius g.$border-radius * 3 g.$border-radius
+    g.$border-radius;
+  border: g.$border;
+  overflow: hidden;
+  box-shadow: 0px -80px 16px -17px rgba(26, 26, 29, 0.7) inset;
+  transition-duration: g.$transition-duration;
+
+  &:hover {
+    border-color: g.$color-red;
+
+    .content__item-image {
+      scale: 1.05;
+    }
+  }
+
+  &-bottom {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    overflow: hidden;
+    width: calc(100% - 15px);
+  }
+  &-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    transition-duration: g.$transition-duration;
+  }
+  &-title {
+    display: block;
+    max-width: 100%;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: g.$color-light;
+  }
+  &-paragraph {
+    color: g.$color-light;
+  }
+}
+
+.content__block-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(
+    171deg,
+    rgba(198, 117, 36, 1) 13%,
+    rgba(194, 162, 0, 1) 39%
+  );
+}
