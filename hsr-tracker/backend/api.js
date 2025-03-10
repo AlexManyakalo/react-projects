@@ -9,7 +9,7 @@ const apiServer = axios.create({
 });
 
 const apiImages = axios.create({
-  baseURL: "https://github.com/Mar-7th/StarRailRes/blob/master/",
+  baseURL: "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/",
 });
 
 export default { apiClient, apiServer, apiImages };
